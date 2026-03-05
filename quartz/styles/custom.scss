@@ -1,3 +1,53 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Animated ambient background blobs
+body {
+  isolation: isolate;
+
+  &::before,
+  &::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  &::before {
+    width: 55vw;
+    height: 55vw;
+    background: var(--secondary);
+    opacity: 0.15;
+    top: -15vw;
+    left: -10vw;
+    animation: bg-blob-1 20s ease-in-out infinite alternate;
+  }
+
+  &::after {
+    width: 45vw;
+    height: 45vw;
+    background: var(--tertiary);
+    opacity: 0.12;
+    bottom: -10vw;
+    right: -10vw;
+    animation: bg-blob-2 25s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes bg-blob-1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(22vw, 28vh) scale(1.15); }
+}
+
+@keyframes bg-blob-2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-18vw, -22vh) scale(0.88); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
+}
