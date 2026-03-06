@@ -237,6 +237,9 @@ export async function handleBuild(argv) {
     argv.watch = true
   }
 
+  console.log("Updating content submodule...")
+  execSync("git submodule update --remote content", { stdio: "inherit" })
+
   console.log(`\n${styleText(["bgGreen", "black"], ` Quartz v${version} `)} \n`)
   const ctx = await esbuild.context({
     entryPoints: [fp],
