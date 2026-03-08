@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Not Found",
-      notFound: "페이지가 존재하지 않거나 비공개 설정이 되어 있습니다.",
+      notFound: "이 노트는 아직 존재하지 않을 가능성이 있습니다. 노트 간 연결의 창발적 특성을 활용하기 위해, 작성되기 전의 노트를 자주 참조합니다.",
       home: "홈페이지로 돌아가기",
     },
     folderContent: {

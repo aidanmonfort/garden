@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Ikke funnet",
-      notFound: "Enten er denne siden privat eller så finnes den ikke.",
+      notFound: "Dette notatet eksisterer sannsynligvis ikke ennå. For å dra nytte av den fremvoksende naturen til forbindelsene mellom notater, refererer jeg ofte til notater før de er laget.",
       home: "Returner til hovedsiden",
     },
     folderContent: {

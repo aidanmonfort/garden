@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Not Found",
-      notFound: "Either this page is private or doesn't exist.",
+      notFound: "This note probably does not exist yet. To take advantage of the emergent nature of connections between notes, I frequently will reference notes before they are made.",
       home: "Return to Homepage",
     },
     folderContent: {

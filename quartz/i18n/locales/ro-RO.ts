@@ -68,7 +68,7 @@ export default {
     },
     error: {
       title: "Pagina nu a fost găsită",
-      notFound: "Fie această pagină este privată, fie nu există.",
+      notFound: "Această notă probabil nu există încă. Pentru a profita de natura emergentă a conexiunilor dintre note, fac frecvent referire la note înainte ca acestea să fie create.",
       home: "Reveniți la pagina de pornire",
     },
     folderContent: {

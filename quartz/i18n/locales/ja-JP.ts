@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Not Found",
-      notFound: "ページが存在しないか、非公開設定になっています。",
+      notFound: "このノートはまだ存在していない可能性があります。ノート間のつながりの創発的な性質を活かすために、作成前のノートを頻繁に参照します。",
       home: "ホームページに戻る",
     },
     folderContent: {

@@ -72,8 +72,7 @@ export default {
     },
     error: {
       title: "Nerasta",
-      notFound:
-        "Arba šis puslapis yra pasiekiamas tik tam tikriems vartotojams, arba tokio puslapio nėra.",
+      notFound: "Ši pastaba tikriausiai dar neegzistuoja. Norėdamas pasinaudoti pastabų ryšių emergentine prigimtimi, dažnai nurodau pastabas prieš jas sukuriant.",
       home: "Grįžti į pagrindinį puslapį",
     },
     folderContent: {

@@ -68,7 +68,7 @@ export default {
     },
     error: {
       title: "Niet gevonden",
-      notFound: "Deze pagina is niet zichtbaar of bestaat niet.",
+      notFound: "Deze notitie bestaat waarschijnlijk nog niet. Om gebruik te maken van de emergente aard van verbindingen tussen notities, verwijs ik vaak naar notities voordat ze gemaakt zijn.",
       home: "Keer terug naar de start pagina",
     },
     folderContent: {

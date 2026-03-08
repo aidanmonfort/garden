@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Não encontrado",
-      notFound: "Esta página é privada ou não existe.",
+      notFound: "Esta nota provavelmente ainda não existe. Para aproveitar a natureza emergente das conexões entre notas, frequentemente faço referência a notas antes de criá-las.",
       home: "Retornar a página inicial",
     },
     folderContent: {

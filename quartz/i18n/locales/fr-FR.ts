@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Introuvable",
-      notFound: "Cette page est soit privée, soit elle n'existe pas.",
+      notFound: "Cette note n'existe probablement pas encore. Pour profiter de la nature émergente des connexions entre les notes, je fais fréquemment référence à des notes avant qu'elles ne soient créées.",
       home: "Retour à la page d'accueil",
     },
     folderContent: {

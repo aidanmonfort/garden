@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Nenalezeno",
-      notFound: "Tato stránka je buď soukromá, nebo neexistuje.",
+      notFound: "Tato poznámka pravděpodobně ještě neexistuje. Abych využil emergentní povahu spojení mezi poznámkami, často odkazuji na poznámky ještě před jejich vytvořením.",
       home: "Návrat na domovskou stránku",
     },
     folderContent: {

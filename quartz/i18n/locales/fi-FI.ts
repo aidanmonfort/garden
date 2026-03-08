@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Ei löytynyt",
-      notFound: "Tämä sivu on joko yksityinen tai sitä ei ole olemassa.",
+      notFound: "Tämä muistiinpano ei todennäköisesti vielä ole olemassa. Hyödyntääkseni muistiinpanojen välisten yhteyksien emergenttistä luonnetta, viittaan usein muistiinpanoihin ennen kuin ne on luotu.",
       home: "Palaa etusivulle",
     },
     folderContent: {

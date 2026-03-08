@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Bulunamadı",
-      notFound: "Bu sayfa ya özel ya da mevcut değil.",
+      notFound: "Bu not muhtemelen henüz mevcut değil. Notlar arasındaki bağlantıların ortaya çıkan doğasından yararlanmak için, sık sık henüz oluşturulmamış notlara atıfta bulunurum.",
       home: "Anasayfaya geri dön",
     },
     folderContent: {

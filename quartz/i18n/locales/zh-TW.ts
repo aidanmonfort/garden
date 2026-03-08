@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "無法找到",
-      notFound: "私人筆記或筆記不存在。",
+      notFound: "此筆記可能尚不存在。為了利用筆記之間連結的湧現性質，我經常在筆記建立之前就引用它們。",
       home: "返回首頁",
     },
     folderContent: {

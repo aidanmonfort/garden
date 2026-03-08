@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Không tìm thấy",
-      notFound: "Trang này riêng tư hoặc không tồn tại.",
+      notFound: "Ghi chú này có thể chưa tồn tại. Để tận dụng bản chất mới nổi của các kết nối giữa các ghi chú, tôi thường xuyên tham chiếu đến các ghi chú trước khi chúng được tạo ra.",
       home: "Về trang chủ",
     },
     folderContent: {

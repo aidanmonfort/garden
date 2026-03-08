@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Nem található",
-      notFound: "Ez a lap vagy privát vagy nem létezik.",
+      notFound: "Ez a feljegyzés valószínűleg még nem létezik. A jegyzetek közötti kapcsolatok emergens természetének kihasználása érdekében gyakran hivatkozom feljegyzésekre azok elkészítése előtt.",
       home: "Vissza a kezdőlapra",
     },
     folderContent: {

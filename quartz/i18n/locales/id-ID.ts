@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Tidak Ditemukan",
-      notFound: "Halaman ini bersifat privat atau tidak ada.",
+      notFound: "Catatan ini mungkin belum ada. Untuk memanfaatkan sifat emergent dari koneksi antar catatan, saya sering merujuk catatan sebelum dibuat.",
       home: "Kembali ke Beranda",
     },
     folderContent: {

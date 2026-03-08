@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Nicht gefunden",
-      notFound: "Diese Seite ist entweder nicht öffentlich oder existiert nicht.",
+      notFound: "Diese Notiz existiert wahrscheinlich noch nicht. Um die emergente Natur der Verbindungen zwischen Notizen zu nutzen, verweise ich häufig auf Notizen, bevor sie erstellt wurden.",
       home: "Zur Startseite",
     },
     folderContent: {

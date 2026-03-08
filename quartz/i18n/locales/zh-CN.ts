@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "无法找到",
-      notFound: "私有笔记或笔记不存在。",
+      notFound: "此笔记可能尚不存在。为了利用笔记之间连接的涌现性质，我经常在笔记创建之前就引用它们。",
       home: "返回首页",
     },
     folderContent: {
