@@ -15,7 +15,7 @@ export const sharedPageComponents: SharedLayout = {
           category: "General",
           categoryId: "DIC_kwDORamU4c4C3xak",
           mapping: "pathname",
-          strict: false,
+          strict: true,
         },
       }),
       condition: (page) => Boolean(page.fileData.filePath),
