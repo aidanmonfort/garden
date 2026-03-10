@@ -5,7 +5,22 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.ConditionalRender({
+      component: Component.Comments({
+        provider: "giscus",
+        options: {
+          repo: "aidanmonfort/garden",
+          repoId: "R_kgDORamU4Q",
+          category: "General",
+          categoryId: "DIC_kwDORamU4c4C3xak",
+          mapping: "pathname",
+          strict: false,
+        },
+      }),
+      condition: (page) => Boolean(page.fileData.filePath),
+    }),
+  ],
   footer: Component.Footer(),
 }
 

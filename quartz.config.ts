@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "aidanmonfort.github.io/garden",
-    ignorePatterns: ["private", "templates", "Templates", ".obsidian"],
+    ignorePatterns: ["private", "Boards", "Templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
