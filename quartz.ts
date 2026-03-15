@@ -6,9 +6,9 @@ const config = await loadQuartzConfig()
 export default config
 export const layout = await loadQuartzLayout()
 
+
+ExternalPlugin.viewRegistry.register({ ...videoCardsViewRegistration, id: "cards" })
+
 ExternalPlugin.BasesPage({
   defaultViewType: "cards",
 });
-
-ExternalPlugin.viewRegistry.register(videoCardsViewRegistration)
-ExternalPlugin.viewRegistry.register({ ...videoCardsViewRegistration, id: "cards" })

@@ -31,6 +31,15 @@ export function pageResources(
 ): StaticResources {
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
   const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
+  const fetchInterceptorScript = `
+(function() {
+  const _orig = window.fetch;
+  window.fetch = function(url, ...args) {
+    if (url === "/static/contentIndex.json") url = "${contentIndexPath}";
+    return _orig.call(this, url, ...args);
+  };
+})();
+`.trim()
 
   const resources: StaticResources = {
     css: [
@@ -44,6 +53,12 @@ export function pageResources(
         src: joinSegments(baseDir, "prescript.js"),
         loadTime: "beforeDOMReady",
         contentType: "external",
+      },
+      {
+        loadTime: "beforeDOMReady",
+        contentType: "inline",
+        spaPreserve: true,
+        script: fetchInterceptorScript,
       },
       {
         loadTime: "beforeDOMReady",
