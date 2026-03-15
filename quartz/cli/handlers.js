@@ -324,6 +324,14 @@ export async function handleBuild(argv) {
   }
 
   console.log(`\n${styleText(["bgGreen", "black"], ` Quartz v${version} `)} \n`)
+
+  // Pull latest content from submodule before building
+  try {
+    console.log("Updating content submodule...")
+    execSync("git submodule update --remote content", { stdio: "inherit" })
+  } catch (err) {
+    console.warn("Warning: failed to update content submodule, using existing content")
+  }
   const ctx = await esbuild.context({
     entryPoints: [fp],
     outfile: cacheFile,

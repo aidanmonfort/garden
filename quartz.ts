@@ -11,3 +11,4 @@ ExternalPlugin.BasesPage({
 });
 
 ExternalPlugin.viewRegistry.register(videoCardsViewRegistration)
+ExternalPlugin.viewRegistry.register({ ...videoCardsViewRegistration, id: "cards" })

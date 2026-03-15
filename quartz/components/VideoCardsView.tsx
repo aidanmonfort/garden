@@ -124,18 +124,6 @@ const VideoCardsView: ViewRenderer = ({ entries, view, basesData, total }) => {
                 <a href={`/${entry.slug}`} class="internal" data-slug={entry.slug}>
                   {entry.title}
                 </a>
-                <div class="bases-card-meta">
-                  {columns.map((column) => {
-                    const value = resolveEntryPropertyValue(column, entry)
-                    if (isEmptyValue(value)) return null
-                    return (
-                      <div class="bases-card-row">
-                        <span class="bases-card-label">{getColumnLabel(column, basesData)}</span>
-                        <span class="bases-card-value">{renderSimpleValue(value)}</span>
-                      </div>
-                    )
-                  })}
-                </div>
               </div>
             </div>
           )
