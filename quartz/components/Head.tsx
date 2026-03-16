@@ -86,6 +86,15 @@ export default (() => {
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 
+        {path && path !== "/" && (
+          <script
+            data-persist=""
+            dangerouslySetInnerHTML={{
+              __html: `(function(){var base=${JSON.stringify(path)};if(!window.location.pathname.startsWith(base))return;var _f=window.fetch.bind(window);window.fetch=function(i,o){if(typeof i==="string"&&i.startsWith("/")&&!i.startsWith(base))i=base+i;return _f(i,o)};document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a"):null;if(!a)return;var h=a.getAttribute("href");if(h&&h.startsWith("/")&&!h.startsWith(base))a.href=base+h},true)})()`,
+            }}
+          />
+        )}
+
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")

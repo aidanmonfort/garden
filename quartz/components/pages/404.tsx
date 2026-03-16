@@ -7,11 +7,18 @@ const NotFound: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
   const baseDir = url.pathname
 
   return (
-    <article class="popover-hint">
-      <h1>404</h1>
-      <p>{i18n(cfg.locale).pages.error.notFound}</p>
-      <a href={baseDir}>{i18n(cfg.locale).pages.error.home}</a>
-    </article>
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(function(){var b=${JSON.stringify(baseDir)},p=location.pathname;if(b&&b!=="/"&&p!==b&&!p.startsWith(b+"/"))location.replace(b+p+location.search+location.hash)})()`,
+        }}
+      />
+      <article class="popover-hint">
+        <h1>404</h1>
+        <p>{i18n(cfg.locale).pages.error.notFound}</p>
+        <a href={baseDir}>{i18n(cfg.locale).pages.error.home}</a>
+      </article>
+    </>
   )
 }
 
