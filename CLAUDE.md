@@ -9,6 +9,12 @@ A customized [Quartz v5](https://quartz.jzhao.xyz/) static site generator for a 
 ## Common Commands
 
 ```bash
+#plugin restore
+npx quartz plugin restore
+
+#plugin resolve
+npx quartz plugin resolve
+
 # Development server (watch mode)
 npx quartz build --serve
 
@@ -32,6 +38,9 @@ npm run install-plugins
 ```
 
 Requires Node >= 22 and npm >= 10.9.2.
+
+## Working Files
+Edits will not be made to anything in the .quartz/ or content/ directories. The first directory is where the plugins exist and so they do will not be changed. The second is the content in my obsidian notebook, changing these files can cause issues in Obsidian. 
 
 ## Architecture Overview
 

@@ -34,6 +34,9 @@ jobs:
         run: npx quartz plugin resolve
       - name: Build Quartz
         run: npx quartz build
+      - name: Fix asset paths for subpath deployment
+        run: |
+          find public/ -name "*.js" -exec sed -i 's|fetch("/static/contentIndex.json")|fetch("/garden/static/contentIndex.json")|g' {} +
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
