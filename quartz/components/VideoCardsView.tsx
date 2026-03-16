@@ -41,42 +41,9 @@ function isEmptyValue(value: unknown): boolean {
   return false
 }
 
-function getColumnLabel(column: string, basesData: BasesData): string {
-  const config = basesData.properties?.[column]
-  if (config?.displayName) return config.displayName
-  const segment = column.split(".").pop() ?? column
-  return segment
-    .split("_")
-    .map((part) => (part ? part.charAt(0).toUpperCase() + part.slice(1) : part))
-    .join(" ")
-}
-
-function getColumns(view: BasesView, basesData: BasesData, entries: BasesEntry[]): string[] {
-  if (view.order && view.order.length > 0) return view.order
-  const columns = new Set<string>()
-  columns.add("file.name")
-  const propertyKeys = basesData.properties ? Object.keys(basesData.properties) : []
-  if (propertyKeys.length > 0) {
-    propertyKeys.forEach((key) => columns.add(key))
-  } else if (entries.length > 0) {
-    const firstEntry = entries[0]
-    if (firstEntry) {
-      Object.keys(firstEntry.properties).forEach((key) => columns.add(key))
-    }
-  }
-  return Array.from(columns)
-}
-
-function renderSimpleValue(value: unknown): string {
-  if (value === null || value === undefined) return ""
-  if (Array.isArray(value)) return value.map((v) => String(v)).join(", ")
-  if (typeof value === "object") return JSON.stringify(value)
-  return String(value)
-}
 
 const VideoCardsView: ViewRenderer = ({ entries, view, basesData, total }) => {
   const imageProperty = typeof view.image === "string" ? view.image : undefined
-  const columns = getColumns(view, basesData, entries).filter((col) => col !== imageProperty)
   const cardSize = view.cardSize
   const cardAspect = view.cardAspect
   const imageFit = typeof view.imageFit === "string" ? view.imageFit : "cover"
