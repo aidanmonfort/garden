@@ -1,4 +1,4 @@
-import type { ViewRenderer, ViewTypeRegistration, BasesData, BasesEntry, BasesView } from "../../.quartz/plugins/bases-page"
+import type { ViewRenderer, ViewTypeRegistration, BasesEntry } from "../../.quartz/plugins/bases-page"
 
 // Inline utilities from @quartz-community/bases-page internal shared/cell
 // (not part of the public dist API)
@@ -101,7 +101,7 @@ const VideoCardsView: ViewRenderer = ({ entries, view, basesData, total }) => {
 }
 
 export const videoCardsViewRegistration: ViewTypeRegistration = {
-  id: "video-cards",
+  id: "cards",
   name: "Video Cards",
   icon: "layout-grid",
   render: VideoCardsView,
