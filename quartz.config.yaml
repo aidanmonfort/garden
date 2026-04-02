@@ -12,6 +12,7 @@ configuration:
     - private
     - Boards
     - Templates
+    - Class
     - .obsidian
   defaultDateType: modified
   theme:
@@ -43,6 +44,12 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
+  - source: github:quartz-community/encrypted-pages
+    enabled: true
+    options:
+      visibility: icon
+    iterations: 600000
+    passwordField: password
   - source: github:quartz-community/created-modified-date
     enabled: true
     options:
@@ -190,8 +197,6 @@ plugins:
       links:
         GitHub: https://github.com/jackyzha0/quartz
         Discord Community: https://discord.gg/cRFFHYye7t
-  - source: github:quartz-community/recent-notes
-    enabled: false
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
