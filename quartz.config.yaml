@@ -13,6 +13,8 @@ configuration:
     - Boards
     - Templates
     - Class
+    - Clippings
+    - Excalidraw
     - .obsidian
   defaultDateType: modified
   theme:
